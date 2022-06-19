@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container mt-5">
+    <h2 class="text-center">ADD EMPLOYEE</h2>
+<div class="row">
+    <div class="col-sm-6">
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Add" class="btn btn-success">
+</form>
+</div>
+</div>
+</div>
+{% endblock %}

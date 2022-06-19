@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+<div class="container mt-5">
+    {%  if allData %}
+    <h2>Search Result:</h2>
+ <table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+         <th scope="col">Phone</th>
+    </tr>
+  </thead>
+     <tbody>
+   {% for data in allData %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{data.name}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.address}}</td>
+      <td>{{data.phone}}</td>
+    </tr>
+    {% endfor %}
+{% else %}
+     <h2>Result Not Found.</h2>
+     {% endif %}
+</table>
+  </div>
+
+{%endblock%}

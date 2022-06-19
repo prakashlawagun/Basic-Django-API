@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+
+{% block main%}
+
+<div class="container mt-5">
+  <h2>Register Section </h2>
+<form method="POST" action="{% url 'control:register'%}">
+    {% csrf_token %}
+<!--  Username-->
+   <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Username</label>
+    <input type="text" id="form2Example1" name="username" class="form-control" required />
+
+  </div>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Email address</label>
+    <input type="email" id="form2Example1" name="email" class="form-control" required/>
+
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" id="form2Example2" name="password" class="form-control" required />
+
+  </div>
+<!--  Password Re write-->
+    <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example2">Re-password</label>
+    <input type="password" id="form2Example2" name="repassword" class="form-control" required />
+
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>You have already an account ? <a href="{%url 'control:login'%}">Login</a></p>
+  </div>
+</form>
+</div>
+{% endblock %}

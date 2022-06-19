@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+ <table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+         <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th scope="row">{{employee.id}}</th>
+      <td>{{employee.name}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.address}}</td>
+      <td>{{employee.phone}}</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+{%endblock%}
